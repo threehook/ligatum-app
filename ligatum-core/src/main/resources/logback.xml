@@ -2,22 +2,22 @@
 
 <configuration>
 
-    <property name="LOG_HOME" value="D:/tmp/logs" />
+    <property name="LOG_HOME" value="./log" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{HH:mm:ss} [%c{1}]  %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>ERROR</level>
+            <level>INFO</level>
         </filter>
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_HOME}/logs/ethereum.log</file>
+        <file>${LOG_HOME}/ligatum.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- daily rollover hourly -->
-            <fileNamePattern>./logs/ligatum-%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_HOME}/ligatum-%d{yyyy-MM-dd}.log.zip</fileNamePattern>
             <!-- 30 days -->
             <maxHistory>30</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>

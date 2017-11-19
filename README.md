@@ -1,2 +1,2 @@
 # ligatum-app
-Ligatum is a Blockchain solution for regular (non crypto-) currencies
+Ligatum is a blockchain based distributed ledger for transferable value assets (like concert tickets) in Java8.
